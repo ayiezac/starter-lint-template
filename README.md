@@ -18,8 +18,7 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 6. Inside lint.yml, paste this github action
 
-``
-name: Lint
+``name: Lint
 
 on:
   push:
