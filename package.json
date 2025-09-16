@@ -1,0 +1,38 @@
+{
+  "name": "starter-lint-template",
+  "module": "index.js",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@antfu/eslint-config": "^5.3.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@html-eslint/eslint-plugin": "^0.46.2",
+    "@html-eslint/parser": "^0.46.2",
+    "@types/htmlhint": "^1.1.5",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
+    "eslint-plugin-format": "^1.0.1",
+    "eslint-plugin-html": "^8.1.3",
+    "eslint-plugin-regexp": "^2.10.0",
+    "htmlhint": "^1.6.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.6",
+    "postcss": "^8.5.6",
+    "stylelint": "^16.24.0",
+    "stylelint-config-alphabetical-order": "^1.0.0",
+    "stylelint-config-recommended": "^17.0.0",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-order": "^7.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "lint": "eslint imagemaps www --ext .js,.jsx,.ts,.tsx && bunx htmlhint {imagemaps,www}/**/*.{html,shtml} && bunx stylelint 'imagemaps/**/*.{css,scss}' 'www/**/*.{css,scss}'",
+    "lint:fix": "eslint imagemaps www --ext .js,.jsx,.ts,.tsx --fix && bunx stylelint '{imagemaps,www}/**/*.{css,scss}' --fix",
+    "autoprefix": "bunx postcss 'imagemaps/**/*.css' 'www/**/*.css' --replace",
+    "prepare": "husky"
+  }
+}
