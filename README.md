@@ -14,6 +14,31 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 4. After initialize, please go to .husky > pre-commit and put this command `bunx lint-staged`
 
+5. Create a file name lint.yml just copy & paste this `.github/workflows/lint.yml`
+
+6. Inside lint.yml, paste this github action
+
+``
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Use Node.js
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun lint
+``
+
 Why? see this link [lint-staged](https://github.com/lint-staged/lint-staged?tab=readme-ov-file#why)
 
 If you have any concerns and suggestions, kindly file a Github issues.
