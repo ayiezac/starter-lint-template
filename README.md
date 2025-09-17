@@ -20,7 +20,9 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 ```Lint
     name: Lint
-    on: push: pull_request:
+    on:
+        push:
+        pull_request:
 
     jobs: 
         build: 
