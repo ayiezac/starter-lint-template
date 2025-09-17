@@ -38,6 +38,6 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 Why? see this link [lint-staged](https://github.com/lint-staged/lint-staged?tab=readme-ov-file#why)
 
-**Note**: If you encounter `Doctype must be declared before any non-comment content. (doctype-first)` just copy and paste this comment block `<!-- htmlhint doctype-first:false, tag-pair:false -->`, to have a hint for htmlhint linter to ignore this shtml file to have doctype and no tag pair since this a component/ssi file
+_**Note**: If you encounter `Doctype must be declared before any non-comment content. (doctype-first)` just copy and paste this comment block `<!-- htmlhint doctype-first:false, tag-pair:false -->`, to have a hint for htmlhint linter to ignore this shtml file to have doctype and no tag pair since this a component/ssi file_
 
 If you have any concerns and suggestions, kindly file a Github issues.
