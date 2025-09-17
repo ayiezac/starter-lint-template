@@ -1,7 +1,7 @@
 # starter-lint-template
 this is starter template for linting html, js and css/scss
 
-1. To get started, clone or fork this repo then kindly install `npm i -g bun`
+1. To get started, clone or fork this repo then kindly install `npm i -g bun` and then copy all files to your workspace
 
 2. To install dependencies:
 
