@@ -34,5 +34,9 @@
     "lint:fix": "eslint imagemaps www --ext .js,.jsx,.ts,.tsx --fix && bunx stylelint '{imagemaps,www}/**/*.{css,scss}' --fix",
     "autoprefix": "bunx postcss 'imagemaps/**/*.css' 'www/**/*.css' --replace",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "www/**/*.{js,jsx,ts,tsx,css,scss,html}": "pnpm lint",
+    "imagemaps/**/*.{js,jsx,ts,tsx,css,scss,html}": "pnpm lint"
   }
 }
