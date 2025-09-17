@@ -18,7 +18,7 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 6. Inside lint.yml, paste this github action
 
-Lint
+```Lint
 
     name: Lint
     on: push: pull_request:
@@ -35,6 +35,7 @@ Lint
                     bun-version: latest
                 - run: bun install
                 - run: bun lint
+```
 
 Why? see this link [lint-staged](https://github.com/lint-staged/lint-staged?tab=readme-ov-file#why)
 
