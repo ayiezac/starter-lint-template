@@ -1,7 +1,7 @@
 # starter-lint-template
 this is starter template for linting html, js and css/scss
 
-1. To get started, clone or fork this repo then kindly install `npm i -g bun`
+1. To get started, clone or fork this repo then kindly install `npm i -g bun` and then copy all files to your workspace
 
 2. To install dependencies:
 
@@ -14,28 +14,8 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 4. After initialize, please go to .husky > pre-commit and put this command `bunx lint-staged`
 
-5. Create a file name lint.yml just copy & paste this `.github/workflows/lint.yml`
-
-6. Inside lint.yml, paste this github action
-
-```Lint
-    name: Lint
-    on: push: pull_request:
-
-    jobs: 
-        build: 
-            runs-on: ubuntu-latest 
-            steps: 
-                - uses: actions/checkout@v5
-
-                - name: Use Node.js
-                  uses: oven-sh/setup-bun@v2
-                  with:
-                    bun-version: latest
-                - run: bun install
-                - run: bun lint
-```
-
 Why? see this link [lint-staged](https://github.com/lint-staged/lint-staged?tab=readme-ov-file#why)
 
-If you have any concerns and suggestions, kindly file a Github issues.
+_**Note**: If you encounter `Doctype must be declared before any non-comment content. (doctype-first)` just copy and paste this comment block `<!-- htmlhint doctype-first:false, tag-pair:false -->`, to have a hint for htmlhint linter to ignore this shtml file to have doctype and no tag pair since this a component/ssi file_
+
+If you have any concerns and suggestions, kindly file a [Github issues](https://github.com/ayiezac/starter-lint-template/issues/new).
