@@ -18,26 +18,23 @@ The init command simplifies setting up husky in a project. It creates a pre-comm
 
 6. Inside lint.yml, paste this github action
 
-``
-name: Lint
+```Lint
+    name: Lint
+    on: push: pull_request:
 
-on:
-  push:
-  pull_request:
+    jobs: 
+        build: 
+            runs-on: ubuntu-latest 
+            steps: 
+                - uses: actions/checkout@v5
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-
-      - name: Use Node.js
-        uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: latest
-      - run: bun install
-      - run: bun lint
-``
+                - name: Use Node.js
+                  uses: oven-sh/setup-bun@v2
+                  with:
+                    bun-version: latest
+                - run: bun install
+                - run: bun lint
+```
 
 Why? see this link [lint-staged](https://github.com/lint-staged/lint-staged?tab=readme-ov-file#why)
 
